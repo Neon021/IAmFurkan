@@ -30,9 +30,9 @@ namespace My3rdBlog
             services.AddRazorPages();
             services.AddMvc(options => options.EnableEndpointRouting = false);
 
-            services.Configure<SmtpSettings>(_config.GetSection("SmtpSettings"));         
-            services.AddDbContext<AppDbContext>(options => options.UseSqlServer(
-                _config.GetConnectionString("Default")));
+            services.Configure<SmtpSettings>(_config.GetSection("SmtpSettings"));
+            services.AddDbContext<AppDbContext>(options =>
+                    options.UseNpgsql("Server=localhost;Port=5432;User Id=postgres;Password=admin;Database=Blog"));
 
 
 
