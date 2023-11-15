@@ -10,6 +10,6 @@ namespace My3rdBlog.Data.Comments
     {
         public int Id { get; set; }
         public string Message { get; set; }
-        public DateTime Created { get; set; } = DateTime.Now;
+        public DateTime Created { get; set; } = DateTime.UtcNow;
     }
 }
