@@ -128,7 +128,7 @@ li:last-child {
 }
 
 li:hover ~ li p {
-    animation: wave-animation 0.3s infinite;
+    /*animation: wave-animation 0.3s infinite;*/
 }
 
 .div-footer {
@@ -140,7 +140,7 @@ li:hover ~ li p {
     font-family: Menlo, monospace;
 }
 
-@keyframes wave-animation {
+/*@keyframes wave-animation {
     0%, 100% {
         transform: rotate(0deg);
     }
@@ -152,7 +152,7 @@ li:hover ~ li p {
     75% {
         transform: rotate(-15deg);
     }
-}
+}*/
 
 
 
