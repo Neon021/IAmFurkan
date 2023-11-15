@@ -32,7 +32,7 @@ namespace My3rdBlog
 
             services.Configure<SmtpSettings>(_config.GetSection("SmtpSettings"));
             services.AddDbContext<AppDbContext>(options =>
-                    options.UseNpgsql("Server=localhost;Port=5432;User Id=postgres;Password=admin;Database=Blog"));
+                    options.UseNpgsql(_config.GetConnectionString("Default")));
 
 
 
