@@ -14,7 +14,40 @@ namespace Blog
         public static void Main(string[] args)
         {
             var host = CreateWebHostBuilder(args).Build();
+            try
+            {
+                var scope = host.Services.CreateScope();
 
+                var ctx = scope.ServiceProvider.GetRequiredService<AppDbContext>();
+                var userMgr = scope.ServiceProvider.GetRequiredService<UserManager<IdentityUser>>();
+                var roleMgr = scope.ServiceProvider.GetRequiredService<RoleManager<IdentityRole>>();
+
+                ctx.Database.EnsureCreated();
+
+                var adminRole = new IdentityRole("Admin"); //Create "Admin" role to get claimed
+                if (!ctx.Roles.Any())
+                {
+                    //create a role
+                    roleMgr.CreateAsync(adminRole).GetAwaiter().GetResult();
+                }
+
+                if (!ctx.Users.Any(u => u.UserName == "admin")) //If there's no user role named "admin" create
+                {
+                    //create an admin
+                    var adminUser = new IdentityUser
+                    {
+                        UserName = "admin",
+                        Email = "admin@test.com"
+                    };
+                    var result = userMgr.CreateAsync(adminUser, "password").GetAwaiter().GetResult();
+                    //assign Admin role to admin user
+                    userMgr.AddToRoleAsync(adminUser, adminRole.Name).GetAwaiter().GetResult();//Assign "admin" user to "Admin" role
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
             host.Run();
         }
 
