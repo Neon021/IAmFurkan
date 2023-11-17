@@ -1,0 +1,11 @@
+C:\Users\bilal\source\repos\IAmFurkan\IAmFurkan.Contracts\bin\Debug\net8.0\IAmFurkan.Contracts.deps.json
+C:\Users\bilal\source\repos\IAmFurkan\IAmFurkan.Contracts\bin\Debug\net8.0\IAmFurkan.Contracts.dll
+C:\Users\bilal\source\repos\IAmFurkan\IAmFurkan.Contracts\bin\Debug\net8.0\IAmFurkan.Contracts.pdb
+C:\Users\bilal\source\repos\IAmFurkan\IAmFurkan.Contracts\obj\Debug\net8.0\IAmFurkan.Contracts.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\bilal\source\repos\IAmFurkan\IAmFurkan.Contracts\obj\Debug\net8.0\IAmFurkan.Contracts.AssemblyInfoInputs.cache
+C:\Users\bilal\source\repos\IAmFurkan\IAmFurkan.Contracts\obj\Debug\net8.0\IAmFurkan.Contracts.AssemblyInfo.cs
+C:\Users\bilal\source\repos\IAmFurkan\IAmFurkan.Contracts\obj\Debug\net8.0\IAmFurkan.Contracts.csproj.CoreCompileInputs.cache
+C:\Users\bilal\source\repos\IAmFurkan\IAmFurkan.Contracts\obj\Debug\net8.0\IAmFurkan.Contracts.dll
+C:\Users\bilal\source\repos\IAmFurkan\IAmFurkan.Contracts\obj\Debug\net8.0\refint\IAmFurkan.Contracts.dll
+C:\Users\bilal\source\repos\IAmFurkan\IAmFurkan.Contracts\obj\Debug\net8.0\IAmFurkan.Contracts.pdb
+C:\Users\bilal\source\repos\IAmFurkan\IAmFurkan.Contracts\obj\Debug\net8.0\ref\IAmFurkan.Contracts.dll

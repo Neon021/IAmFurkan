@@ -1,0 +1,11 @@
+C:\Users\bilal\source\repos\IAmFurkan\IAmFurkan.Infrastructure\bin\Debug\net8.0\IAmFurkan.Infrastructure.deps.json
+C:\Users\bilal\source\repos\IAmFurkan\IAmFurkan.Infrastructure\bin\Debug\net8.0\IAmFurkan.Infrastructure.dll
+C:\Users\bilal\source\repos\IAmFurkan\IAmFurkan.Infrastructure\bin\Debug\net8.0\IAmFurkan.Infrastructure.pdb
+C:\Users\bilal\source\repos\IAmFurkan\IAmFurkan.Infrastructure\obj\Debug\net8.0\IAmFurkan.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\bilal\source\repos\IAmFurkan\IAmFurkan.Infrastructure\obj\Debug\net8.0\IAmFurkan.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\bilal\source\repos\IAmFurkan\IAmFurkan.Infrastructure\obj\Debug\net8.0\IAmFurkan.Infrastructure.AssemblyInfo.cs
+C:\Users\bilal\source\repos\IAmFurkan\IAmFurkan.Infrastructure\obj\Debug\net8.0\IAmFurkan.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\bilal\source\repos\IAmFurkan\IAmFurkan.Infrastructure\obj\Debug\net8.0\IAmFurkan.Infrastructure.dll
+C:\Users\bilal\source\repos\IAmFurkan\IAmFurkan.Infrastructure\obj\Debug\net8.0\refint\IAmFurkan.Infrastructure.dll
+C:\Users\bilal\source\repos\IAmFurkan\IAmFurkan.Infrastructure\obj\Debug\net8.0\IAmFurkan.Infrastructure.pdb
+C:\Users\bilal\source\repos\IAmFurkan\IAmFurkan.Infrastructure\obj\Debug\net8.0\ref\IAmFurkan.Infrastructure.dll

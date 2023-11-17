@@ -1,0 +1,11 @@
+C:\Users\bilal\source\repos\IAmFurkan\IAmFurkan.Domain\bin\Debug\net8.0\IAmFurkan.Domain.deps.json
+C:\Users\bilal\source\repos\IAmFurkan\IAmFurkan.Domain\bin\Debug\net8.0\IAmFurkan.Domain.dll
+C:\Users\bilal\source\repos\IAmFurkan\IAmFurkan.Domain\bin\Debug\net8.0\IAmFurkan.Domain.pdb
+C:\Users\bilal\source\repos\IAmFurkan\IAmFurkan.Domain\obj\Debug\net8.0\IAmFurkan.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\bilal\source\repos\IAmFurkan\IAmFurkan.Domain\obj\Debug\net8.0\IAmFurkan.Domain.AssemblyInfoInputs.cache
+C:\Users\bilal\source\repos\IAmFurkan\IAmFurkan.Domain\obj\Debug\net8.0\IAmFurkan.Domain.AssemblyInfo.cs
+C:\Users\bilal\source\repos\IAmFurkan\IAmFurkan.Domain\obj\Debug\net8.0\IAmFurkan.Domain.csproj.CoreCompileInputs.cache
+C:\Users\bilal\source\repos\IAmFurkan\IAmFurkan.Domain\obj\Debug\net8.0\IAmFurkan.Domain.dll
+C:\Users\bilal\source\repos\IAmFurkan\IAmFurkan.Domain\obj\Debug\net8.0\refint\IAmFurkan.Domain.dll
+C:\Users\bilal\source\repos\IAmFurkan\IAmFurkan.Domain\obj\Debug\net8.0\IAmFurkan.Domain.pdb
+C:\Users\bilal\source\repos\IAmFurkan\IAmFurkan.Domain\obj\Debug\net8.0\ref\IAmFurkan.Domain.dll

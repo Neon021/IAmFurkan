@@ -1,0 +1,166 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\bilal\\source\\repos\\IAmFurkan\\IAmFurkan.Infrastructure\\IAmFurkan.Infrastructure.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\bilal\\source\\repos\\IAmFurkan\\IAmFurkan.Application\\IAmFurkan.Application.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\bilal\\source\\repos\\IAmFurkan\\IAmFurkan.Application\\IAmFurkan.Application.csproj",
+        "projectName": "IAmFurkan.Application",
+        "projectPath": "C:\\Users\\bilal\\source\\repos\\IAmFurkan\\IAmFurkan.Application\\IAmFurkan.Application.csproj",
+        "packagesPath": "C:\\Users\\bilal\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\bilal\\source\\repos\\IAmFurkan\\IAmFurkan.Application\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\bilal\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\Users\\bilal\\source\\repos\\IAmFurkan\\IAmFurkan.Domain\\IAmFurkan.Domain.csproj": {
+                "projectPath": "C:\\Users\\bilal\\source\\repos\\IAmFurkan\\IAmFurkan.Domain\\IAmFurkan.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\bilal\\source\\repos\\IAmFurkan\\IAmFurkan.Domain\\IAmFurkan.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\bilal\\source\\repos\\IAmFurkan\\IAmFurkan.Domain\\IAmFurkan.Domain.csproj",
+        "projectName": "IAmFurkan.Domain",
+        "projectPath": "C:\\Users\\bilal\\source\\repos\\IAmFurkan\\IAmFurkan.Domain\\IAmFurkan.Domain.csproj",
+        "packagesPath": "C:\\Users\\bilal\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\bilal\\source\\repos\\IAmFurkan\\IAmFurkan.Domain\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\bilal\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\bilal\\source\\repos\\IAmFurkan\\IAmFurkan.Infrastructure\\IAmFurkan.Infrastructure.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\bilal\\source\\repos\\IAmFurkan\\IAmFurkan.Infrastructure\\IAmFurkan.Infrastructure.csproj",
+        "projectName": "IAmFurkan.Infrastructure",
+        "projectPath": "C:\\Users\\bilal\\source\\repos\\IAmFurkan\\IAmFurkan.Infrastructure\\IAmFurkan.Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\bilal\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\bilal\\source\\repos\\IAmFurkan\\IAmFurkan.Infrastructure\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\bilal\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\Users\\bilal\\source\\repos\\IAmFurkan\\IAmFurkan.Application\\IAmFurkan.Application.csproj": {
+                "projectPath": "C:\\Users\\bilal\\source\\repos\\IAmFurkan\\IAmFurkan.Application\\IAmFurkan.Application.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
