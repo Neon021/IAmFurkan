@@ -1,3 +1,0 @@
-﻿<Project>
-  <Import Project="..\build\IAmFurkan.Api.props" />
-</Project>
