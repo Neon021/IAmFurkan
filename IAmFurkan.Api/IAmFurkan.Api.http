@@ -1,6 +1,13 @@
 @IAmFurkan.Api_HostAddress = http://localhost:5009
 
-GET {{IAmFurkan.Api_HostAddress}}/weatherforecast/
-Accept: application/json
+POST {{IAmFurkan.Api_HostAddress}}/auth/register
+Content-Type: application/json
+
+{
+    "firstName" : "Furkan Bilal",
+    "lastName" : "Yigit",
+    "email" : "bilalyigit594@gmail.com",
+    "password" : "furkan214284"
+}
 
 ###
