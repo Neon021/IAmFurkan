@@ -1,4 +1,6 @@
 ﻿using IAmFurkan.Application.Services.Authentication;
+using IAmFurkan.Application.Services.Authentication.Commands;
+using IAmFurkan.Application.Services.Authentication.Queries;
 using IAmFurkan.Contracts.Authentication;
 using Microsoft.AspNetCore.Mvc;
 
@@ -8,17 +10,18 @@ namespace IAmFurkan.Api.Controller;
 [Route("auth")]
 public class AuthenticationController : ControllerBase
 {
-    private readonly IAuthenticationService _authenticationService;
-
-    public AuthenticationController(IAuthenticationService authenticationService)
+    private readonly IAuthenticationCommandService _authenticationCommandService;
+    private readonly IAuthenticationQueryService _authenticationQueryService;
+    public AuthenticationController(IAuthenticationCommandService authenticationCommandService, IAuthenticationQueryService authenticationQueryService)
     {
-        _authenticationService = authenticationService;
+        _authenticationCommandService = authenticationCommandService;
+        _authenticationQueryService = authenticationQueryService;
     }
 
     [Route("register")]
     public IActionResult Register(RegisterRequest request)
     {
-        AuthenticationResult? authResult = _authenticationService.Register(
+        AuthenticationResult? authResult = _authenticationCommandService.Register(
             request.FirstName,
             request.LastName,
             request.Email,
@@ -36,7 +39,7 @@ public class AuthenticationController : ControllerBase
     [Route("login")]
     public IActionResult Login(LoginRequest request)
     {
-        AuthenticationResult? authResult = _authenticationService.Login(
+        AuthenticationResult? authResult = _authenticationQueryService.Login(
             request.Email,
             request.Password);
 
