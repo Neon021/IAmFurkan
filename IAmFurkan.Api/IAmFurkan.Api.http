@@ -11,3 +11,11 @@ Content-Type: application/json
 }
 
 ###
+
+POST {{IAmFurkan.Api_HostAddress}}/auth/login
+Content-Type: application/json
+
+{
+    "email" : "bilalyigit594@gmail.com",
+    "password" : "furkan214284"
+}

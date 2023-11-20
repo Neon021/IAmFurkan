@@ -1,8 +1,11 @@
 using IAmFurkan.Application;
 using IAmFurkan.Infrastructure;
+using System.Reflection;
 
 var builder = WebApplication.CreateBuilder(args);
 {
+    builder.Configuration.AddUserSecrets(Assembly.GetExecutingAssembly());
+
     builder.Services
         .AddApplication()
         .AddInfrastructure(builder.Configuration);
