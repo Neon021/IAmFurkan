@@ -1,5 +1,7 @@
-﻿using IAmFurkan.Application.Common.Interfaces.Authentication;
+﻿using ErrorOr;
+using IAmFurkan.Application.Common.Interfaces.Authentication;
 using IAmFurkan.Application.Common.Interfaces.Persistence;
+using IAmFurkan.Domain.Common.Errors;
 using IAmFurkan.Domain.Entities;
 
 namespace IAmFurkan.Application.Services.Authentication.Commands;
@@ -13,11 +15,11 @@ public class AuthenticationCommandService : IAuthenticationCommandService
         _userRepository = userRepository;
     }
 
-    public AuthenticationResult Register(string firstName, string lastName, string email, string password)
+    public ErrorOr<AuthenticationResult> Register(string firstName, string lastName, string email, string password)
     {
         if (_userRepository.GetUserByEmail(email) != null)
         {
-            throw new Exception("User with given email already exists");
+            return Errors.User.DuplicateEmail;
         }
 
         User user = new()
@@ -30,7 +32,7 @@ public class AuthenticationCommandService : IAuthenticationCommandService
         _userRepository.Add(user);
 
         string? token = _jwtTokenGenerator.GenerateToken(user);
-        return new(
+        return new AuthenticationResult(
             user,
             token);
     }

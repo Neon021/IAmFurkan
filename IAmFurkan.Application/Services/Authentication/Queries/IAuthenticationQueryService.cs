@@ -1,5 +1,7 @@
-﻿namespace IAmFurkan.Application.Services.Authentication.Queries;
+﻿using ErrorOr;
+
+namespace IAmFurkan.Application.Services.Authentication.Queries;
 public interface IAuthenticationQueryService
 {
-    AuthenticationResult Login(string email, string password);
+    ErrorOr<AuthenticationResult> Login(string email, string password);
 }
