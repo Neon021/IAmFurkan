@@ -1,8 +1,9 @@
 ﻿using ErrorOr;
-using IAmFurkan.Application.Services.Authentication;
-using IAmFurkan.Application.Services.Authentication.Commands;
-using IAmFurkan.Application.Services.Authentication.Queries;
+using IAmFurkan.Application.Authentication.Commands.Register;
+using IAmFurkan.Application.Authentication.Common;
+using IAmFurkan.Application.Authentication.Queries.Login;
 using IAmFurkan.Contracts.Authentication;
+using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
 namespace IAmFurkan.Api.Controller;
@@ -11,12 +12,10 @@ namespace IAmFurkan.Api.Controller;
 [Route("auth")]
 public class AuthenticationController : ApiController
 {
-    private readonly IAuthenticationCommandService _authenticationCommandService;
-    private readonly IAuthenticationQueryService _authenticationQueryService;
-    public AuthenticationController(IAuthenticationCommandService authenticationCommandService, IAuthenticationQueryService authenticationQueryService)
+    private readonly ISender _mediatr;
+    public AuthenticationController(ISender mediatr)
     {
-        _authenticationCommandService = authenticationCommandService;
-        _authenticationQueryService = authenticationQueryService;
+        _mediatr = mediatr;
     }
 
     private static AuthenticationResponse MapAuthResult(AuthenticationResult result)
@@ -29,31 +28,29 @@ public class AuthenticationController : ApiController
     }
 
     [Route("register")]
-    public IActionResult Register(RegisterRequest request)
+    public async Task<IActionResult> RegisterAsync(RegisterRequest request)
     {
-        ErrorOr<AuthenticationResult> authResult = _authenticationCommandService.Register(
-            request.FirstName,
-            request.LastName,
-            request.Email,
-            request.Password);
+        RegisterCommand command = new(request.FirstName, request.LastName, request.Email, request.Password);
+        ErrorOr<AuthenticationResult> authResult = await _mediatr.Send(command);
 
         return authResult.Match(
             authResult => Ok(MapAuthResult(authResult)),
             errors => Problem(errors));
     }
     [Route("login")]
-    public IActionResult Login(LoginRequest request)
+    public async Task<IActionResult> Login(LoginRequest request)
     {
-        ErrorOr<AuthenticationResult> authResult = _authenticationQueryService.Login(
-            request.Email,
-            request.Password);
+        LoginQuery query = new(request.Email, request.Password);
 
-        if (authResult.IsError && authResult.FirstError == IAmFurkan.Domain.Common.Errors.Errors.Authentication.InvalidCredentials)
+        ErrorOr<AuthenticationResult> authResult = await _mediatr.Send(query);
+
+        if (authResult.IsError && authResult.FirstError == Domain.Common.Errors.Errors.Authentication.InvalidCredentials)
         {
             return Problem(statusCode: StatusCodes.Status401Unauthorized, title: authResult.FirstError.Description);
         }
 
-        return authResult.Match(authResult => Ok(MapAuthResult(authResult)),
+        return authResult.Match(
+            authResult => Ok(MapAuthResult(authResult)),
             errors => Problem(errors));
     }
 }
