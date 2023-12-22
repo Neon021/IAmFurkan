@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+﻿    <Project Sdk="Microsoft.NET.Sdk">
 
   <ItemGroup>
 	<PackageReference Include="MediatR" Version="12.1.1" />
@@ -8,6 +8,10 @@
   <ItemGroup>
     <ProjectReference Include="..\IAmFurkan.Domain\IAmFurkan.Domain.csproj" />
   </ItemGroup>
+		
+	<ItemGroup>
+		<Folder Include="Common\Behaviors\" />
+	</ItemGroup>
 
   <PropertyGroup>
     <TargetFramework>net7.0</TargetFramework>

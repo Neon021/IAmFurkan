@@ -3,6 +3,7 @@ using IAmFurkan.Application.Authentication.Commands.Register;
 using IAmFurkan.Application.Authentication.Common;
 using IAmFurkan.Application.Authentication.Queries.Login;
 using IAmFurkan.Contracts.Authentication;
+using MapsterMapper;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
@@ -13,34 +14,27 @@ namespace IAmFurkan.Api.Controller;
 public class AuthenticationController : ApiController
 {
     private readonly ISender _mediatr;
-    public AuthenticationController(ISender mediatr)
+    private readonly IMapper _mapper;
+    public AuthenticationController(ISender mediatr, IMapper mapper)
     {
         _mediatr = mediatr;
-    }
-
-    private static AuthenticationResponse MapAuthResult(AuthenticationResult result)
-    {
-        return new AuthenticationResponse(result.User.Id,
-            result.User.FirstName,
-            result.User.LastName,
-            result.User.Email,
-            result.Token);
+        _mapper = mapper;
     }
 
     [Route("register")]
     public async Task<IActionResult> RegisterAsync(RegisterRequest request)
     {
-        RegisterCommand command = new(request.FirstName, request.LastName, request.Email, request.Password);
+        RegisterCommand command = _mapper.Map<RegisterCommand>(request);
         ErrorOr<AuthenticationResult> authResult = await _mediatr.Send(command);
 
         return authResult.Match(
-            authResult => Ok(MapAuthResult(authResult)),
+            authResult => Ok(_mapper.Map<AuthenticationResult, AuthenticationResponse>(authResult)),
             errors => Problem(errors));
     }
     [Route("login")]
     public async Task<IActionResult> Login(LoginRequest request)
     {
-        LoginQuery query = new(request.Email, request.Password);
+        LoginQuery query = _mapper.Map<LoginQuery>(request);
 
         ErrorOr<AuthenticationResult> authResult = await _mediatr.Send(query);
 
@@ -50,7 +44,7 @@ public class AuthenticationController : ApiController
         }
 
         return authResult.Match(
-            authResult => Ok(MapAuthResult(authResult)),
+            authResult => Ok(_mapper.Map<AuthenticationResponse>(authResult)),
             errors => Problem(errors));
     }
 }
