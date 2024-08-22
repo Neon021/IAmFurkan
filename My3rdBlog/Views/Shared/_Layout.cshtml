@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewBag.Title</title>
+    <meta name="description" content="@ViewBag.Description" />
+    <meta name="keywords" content="@ViewBag.Keywords" />
+
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+
+</head>
+
+<body>
+    <header>
+        <div class="menu-button">Menu</div>
+        <ol class="flexnav" data-breakpoint="800">
+            <li><a asp-controller="Home" asp-action="Index">Home</a></li>
+            <li><a asp-controller="Home" asp-action="Index" asp-route-category="Algorithms">Algorithms</a></li>
+            <li><a asp-controller="Home" asp-action="Index" asp-route-category="Web">Web</a></li>
+            <li><a asp-controller="Home" asp-action="Index" asp-route-category="Design Patterns">Design Patterns</a></li>
+            <li>
+                <a asp-controller="Panel" asp-action="Edit">Create Post</a>
+                @if (User.Identity.IsAuthenticated)
+                {
+                    @if (User.IsInRole("Admin"))
+                    {
+                    <li><a asp-controller="Panel" asp-action="Index" asp-route-category="Panel">Admin Panel</a></li>
+                    }
+                <li><a asp-controller="Auth" asp-action="Logout">Logout</a></li>
+                }
+                else
+                {
+                <li><a asp-controller="Auth" asp-action="Login">Sign In</a></li>
+                }
+            </li>
+        </ol>
+    </header>
+
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    @await RenderSectionAsync("scripts", false)
+</body>
+</html>

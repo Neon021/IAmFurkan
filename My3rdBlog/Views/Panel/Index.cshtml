@@ -1,0 +1,33 @@
+﻿@using Blog.Models
+@using Microsoft.AspNetCore.Authorization
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@model IEnumerable<Post>
+
+@{
+
+}
+ @*@attribute [Authorize(Roles = "Admin")]*@
+ <header >
+    <h2 class="admin-title">Admin Panel!</h2>
+</header>
+
+<a class="bn1" asp-controller="Panel" asp-action="Edit">
+    Add New Post
+</a>
+
+<div class="div-footer">
+    <ul>
+        @foreach (var post in Model)
+        {
+            <li class="admin-ul">
+                <a class="title" asp-controller="Home" asp-action="Post" asp-route-id="@post.Id">@post.Title</a>
+                <a asp-controller="Panel" asp-action="Edit" asp-route-id="@post.Id" >
+                    Edit
+                </a>
+                <a asp-controller="Panel" asp-action="Remove" asp-route-id="@post.Id" >
+                    Remove
+                </a>
+            </li>
+        }
+    </ul>
+</div>

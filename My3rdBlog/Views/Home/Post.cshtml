@@ -1,0 +1,75 @@
+﻿@using Blog.Models
+@using My3rdBlog.ViewModels
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@model Post
+
+@{
+
+    ViewBag.Title = Model.Title;
+    ViewBag.Description = Model.Description;
+    ViewBag.Keywords = $"{Model.Tags.Replace(",", "")} {Model.Category}";
+    var base_path = Context.Request.PathBase;
+}
+
+
+<div class="container">
+
+    <div class="post-title">
+        @Model.Title
+    </div>
+    <div class="post-body">
+        @Html.Raw(Model.Body)
+    </div>
+
+
+    <div class="container mb-5 mt-5">
+
+        <div class="card">
+            @if (User.Identity.IsAuthenticated)
+            {
+                <div class="comment-section">
+                    @{
+                        await Html.RenderPartialAsync("_MainComment", new CommentViewModel { PostId = Model.Id, MainCommentId = 0 });
+                    }
+                    @foreach (var c in Model.MainComments)
+                    {
+                        <div class="comment-text-sm">
+                            <span>
+                                @c.Message 
+                            </span>
+                        </div>
+                        <div class="comment-text-sm">
+                            <span>
+                                @c.Created 
+                            </span>
+                        </div>
+
+
+                        <div style="margin-left: 20px;">
+                            <h4>Sub Comments</h4>
+                            @{
+                                await Html.RenderPartialAsync("_MainComment", new CommentViewModel { PostId = Model.Id, MainCommentId = c.Id });
+                            }
+
+                            @foreach (var sc in c.subComments)
+                            {
+                                <p>
+                                    @sc.Message --- @sc.Created
+                                </p>
+                            }
+                        </div>
+                    }
+                </div>
+            }
+            else
+            {
+                <div class="form-horizontal">
+                    <a class="bn1" asp-action="Login" asp-controller="Auth">Sign In</a> Sign in to comment on this post
+                </div>
+            }
+        </div>
+    </div>
+</div>
+
+@section scripts{
+    }   
