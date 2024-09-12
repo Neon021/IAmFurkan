@@ -1,70 +1,9 @@
-﻿@keyframes color {
-    0% {
-        background: #deaaff;
-    }
-
-    20% {
-        background: #d8bbff;
-    }
-
-    40% {
-        background: #d0d1ff;
-    }
-
-    60% {
-        background: #c8e7ff;
-    }
-
-    80% {
-        background: #c0fdff;
-    }
-
-    100% {
-        background: #e2afff;
-    }
-}
-
-body {
-    animation: color 30s infinite linear;
-}
-
-    body#mainpage {
-        animation: color 30s infinite linear;
-    }
-
-    body#login {
-        margin: 0;
-        background: repeating-linear-gradient(90deg,#fff,#a5cfed 10px,#f9f9f9 10px,#f9f9f9 20px);
-    }
-
-
-a {
-    color: white;
-    text-decoration: none;
-}
-
-    a:hover {
-        text-decoration: underline;
-    }
-
-nav {
-    background-color: black;
-    height: 50px;
-    width: 100%;
-    text-align: center;
-}
-
-    nav a {
-        display: inline-block;
-        padding: 15px;
-    }
-
-
-
+﻿
 
 
 /*/* Home/Index CSS */
 .main-page {
+    background-color: #090A0B;
     position: relative;
     height: 500px;
     background-position: center;
@@ -77,7 +16,7 @@ nav {
 }
 
     .main-page .title {
-        color: black;
+        color: #B3C4DD;
         font-family: Lato, Helvetica, sans-serif;
         font-size: 90px;
         font-weight: 100;
@@ -88,7 +27,7 @@ nav {
     }
 
 .footer {
-    background-color: #F1F1F1;
+    background-color: #090A0B;
     text-align: center;
     padding: 10px;
 }
@@ -99,6 +38,7 @@ nav {
 
 /*Footer CSS*/
 .footer-ul {
+    background-color: #090A0B;
     display: inline-grid;
     grid-auto-flow: row;
     grid-gap: 24px;
@@ -113,7 +53,7 @@ nav {
 }
 
 a {
-    color: black;
+    color: #B3C4DD;
     text-decoration: none;
     box-shadow: inset 0 -1px 0 hsla(0, 0%, 100%, 0.4);
 }
@@ -128,11 +68,12 @@ li:last-child {
 }
 
 li:hover ~ li p {
-    /*animation: wave-animation 0.3s infinite;*/
+    animation: wave-animation 0.3s infinite;
 }
 
 .div-footer {
-    display: flex;
+    background-color: #090A0B;
+    place-content: center;
     height: 25%;
     width: 100%;
     animation: color 30s infinite linear;
@@ -140,7 +81,7 @@ li:hover ~ li p {
     font-family: Menlo, monospace;
 }
 
-/*@keyframes wave-animation {
+@keyframes wave-animation {
     0%, 100% {
         transform: rotate(0deg);
     }
@@ -152,7 +93,7 @@ li:hover ~ li p {
     75% {
         transform: rotate(-15deg);
     }
-}*/
+}
 
 
 
@@ -186,8 +127,8 @@ li:hover ~ li p {
         font-family: Lato, Helvetica, sans-serif;
         font-size: 25px;
         font-weight: 100;
-        text-decoration:underline;
-        text-decoration-style:unset
+        text-decoration: underline;
+        text-decoration-style: unset
     }
 
 
@@ -214,13 +155,13 @@ li:hover ~ li p {
 
 .searchTerm {
     width: 100%;
-    border: 3px solid #450920;
+    border: 3px solid #B3C4DD;
     border-right: none;
     padding: 5px;
     height: 20px;
     border-radius: 5px 0 0 5px;
     outline: none;
-    color: white;
+    color: dimgrey;
 }
 
     .searchTerm:focus {
@@ -229,9 +170,9 @@ li:hover ~ li p {
 
 .searchButton {
     width: 40px;
-    height: 36px;
-    border: 1px solid #450920;
-    background: #6d2e46;
+    height: 35px;
+    border: 1px solid #B3C4DD;
+    background: #B3C4DD;
     text-align: center;
     color: #ffa5ab;
     border-radius: 0 5px 5px 0;
@@ -240,7 +181,7 @@ li:hover ~ li p {
 }
 
     .searchButton:hover {
-        background: #89023e;
+        background: #8baadc;
     }
 
 
@@ -366,8 +307,8 @@ post-title:after {
 }
 
     .pages a {
-        background-color: black;
-        color: #b8f2e6;
+        background-color: #090A0B;
+        color: #B3C4DD;
         padding: 0.5rem 0.75rem;
         border: 1px solid #450920;
         margin: 0 0.25rem;
@@ -375,11 +316,11 @@ post-title:after {
     }
 
         .pages a.active {
-            background-color: #450920;
+            background-color: #090A0B;
         }
 
         .pages a:hover {
-            background-color: #B20600;
+            background-color: #222;
             text-decoration: none;
         }
 
@@ -394,6 +335,7 @@ post-title:after {
 
 /*Navbar css*/
 .container {
+    background-color: #090A0B;
     width: 100%;
     margin: auto;
     position: absolute;
@@ -408,12 +350,12 @@ post-title:after {
 .menu-button {
     font-family: Lato, Helvetica, sans-serif;
     line-height: 1;
-    background: white;
+    background: #090A0B;
 }
 
 .flexnav {
+    background-color: #090A0B; 
     padding: 0;
-    margin-left: 250px;
     display: block;
     overflow: visible;
     width: 100%;
@@ -421,6 +363,7 @@ post-title:after {
 
     .flexnav > li > a,
     .menu-button {
+        margin-left: 100px;
         padding: 18px 22px;
         font-size: 18px;
         text-transform: uppercase;
@@ -434,7 +377,7 @@ post-title:after {
 
 .menu-button {
     display: none;
-    color: #B20600;
+    color: #B3C4DD;
     cursor: pointer;
 }
 
@@ -445,7 +388,7 @@ post-title:after {
 }
 
 .flexnav li a {
-    color: black;
+    color: #B3C4DD;
     -webkit-transition: color 0.2s ease-out;
     -moz-transition: color 0.2s ease-out;
     -ms-transition: color 0.2s ease-out;
@@ -463,198 +406,6 @@ post-title:after {
     color: #a53860;
 }
 
-.flexnav > .item-with-ul > a {
-    padding-right: 66px;
-}
-
-touch-button {
-    display: block;
-    position: absolute;
-    right: 0;
-    top: 0;
-    width: 54px;
-    height: 54px;
-    z-index: 99;
-    cursor: pointer;
-    background: 0 0;
-}
-
-.touch-button::after {
-    content: "";
-    display: block;
-    position: absolute;
-    width: 26px;
-    height: 26px;
-    border: 1px solid black;
-    right: 13px;
-    top: 13px;
-    border-radius: 23px;
-}
-
-.touch-button::before {
-    content: "";
-    display: block;
-    width: 10px;
-    height: 10px;
-    position: absolute;
-    border-bottom: 1px solid #B20600;
-    border-left: 1px solid #B20600;
-    right: 21px;
-    top: 20px;
-    -webkit-transform: rotate(-45deg);
-    -moz-transform: rotate(-45deg);
-    -ms-transform: rotate(-45deg);
-    -o-transform: rotate(-45deg);
-    transform: rotate(-45deg);
-}
-
-.flexnav li:hover > .touch-button::before,
-.sm-screen .submenu-open::before {
-    border-bottom-color: #fff;
-    border-left-color: #fff;
-}
-
-.flexnav li:hover > .touch-button::after,
-.sm-screen .submenu-open::after {
-    border-color: #fff;
-}
-
-.flexnav ul {
-    position: absolute;
-    left: 0;
-    padding: 0;
-}
-
-    .flexnav ul ul {
-        left: 244px;
-        top: -1px;
-    }
-
-    .flexnav ul li {
-        display: block;
-        position: relative;
-        padding: 0;
-        margin: 0;
-        border-top: 1px solid #31353f;
-    }
-
-        .flexnav ul li a {
-            background: #2b2f3a;
-            padding: 12px 22px;
-            display: block;
-            width: 200px;
-            text-decoration: none;
-        }
-
-    .flexnav ul .touch-button {
-        width: 40px;
-        height: 40px;
-        border-left: 1px solid #31353f;
-    }
-
-        .flexnav ul .touch-button::after {
-            top: 8px;
-            right: 8px;
-            width: 22px;
-            height: 22px;
-        }
-
-        .flexnav ul .touch-button::before {
-            right: 17px;
-            top: 16px;
-            height: 7px;
-            width: 7px;
-            -webkit-transform: rotate(-135deg);
-            -moz-transform: rotate(-135deg);
-            -ms-transform: rotate(-135deg);
-            -o-transform: rotate(-135deg);
-            transform: rotate(-135deg);
-        }
-
-@media all and (max-width: 800px) {
-    .flexnav {
-        overflow: hidden;
-        max-height: 0;
-    }
-
-        .flexnav.show {
-            overflow: visible;
-            max-height: 3000px;
-        }
-
-        .flexnav li {
-            float: none;
-        }
-
-        .flexnav ul li a {
-            width: auto;
-            padding-left: 42px;
-        }
-
-        .flexnav > li {
-            border-top: 1px solid #31353f;
-        }
-
-        .flexnav ul,
-        .flexnav ul ul {
-            position: relative;
-            left: 0;
-            width: 100%;
-        }
-
-        .flexnav.show .touch-button,
-        .menu-button .touch-button {
-            border-left: 1px solid #31353f;
-            z-index: 999;
-        }
-
-        .flexnav ul .touch-button::before {
-            -webkit-transform: rotate(-45deg);
-            -moz-transform: rotate(-45deg);
-            -ms-transform: rotate(-45deg);
-            -o-transform: rotate(-45deg);
-            transform: rotate(-45deg);
-            right: 16px;
-            top: 15px;
-        }
-
-    .menu-button {
-        display: block;
-    }
-
-        .menu-button .touch-button::before {
-            -webkit-transform: rotate(0);
-            -moz-transform: rotate(0);
-            -ms-transform: rotate(0);
-            -o-transform: rotate(0);
-            transform: rotate(0);
-            border-left: 0;
-            border-top: 2px solid #7a8189;
-            border-bottom: 2px solid #7a8189;
-            height: 2px;
-            width: 12px;
-            top: 22px;
-        }
-
-        .menu-button::after {
-            display: block;
-            width: 12px;
-            height: 2px;
-            content: "";
-            position: absolute;
-            background: #7a8189;
-            right: 21px;
-            top: 30px;
-        }
-
-    .flexnav ul ul li a {
-        padding-left: 62px;
-    }
-
-    .flexnav ul ul ul li a {
-        padding-left: 82px;
-    }
-}
 
 
 
@@ -666,11 +417,11 @@ touch-button {
     padding: 0 0 0 0;
 }
 
-    .form-container .form-horizontal {
+/*    .form-container .form-horizontal {
         background: repeating-linear-gradient(90deg,#fff,#a5cfed 10px,#f9f9f9 10px,#f9f9f9 20px);
         padding: 70px 40px 40px;
         border-radius: 0;
-    }
+    }*/
 
 .form-horizontal .title {
     color: #222;
@@ -847,13 +598,14 @@ touch-button {
     display: flex;
     align-items: space-around;
     max-width: 1200px;
+    background-color: #090A0B;
 }
 
 .tile {
     width: 380px;
     height: 380px;
     margin: 10px;
-    background-color: #e0fbfc;
+    background-color: #090A0B;
     display: inline-block;
     background-size: cover;
     position: relative;
@@ -910,7 +662,6 @@ touch-button {
 }
 
 .tile:hover {
-    /*   background-color:#99aeff; */
     box-shadow: 0px 35px 77px -17px rgba(0,0,0,0.64);
     transform: scale(1.05);
 }
