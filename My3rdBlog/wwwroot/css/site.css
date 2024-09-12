@@ -258,24 +258,12 @@ li:hover ~ li p {
 /*Article CSS*/
 :root {
     --padding: 21px;
-    --bg-color: #f9f9f9;
-    --text-color: #0a643a;
-    --accent-color: #a0bb2e;
+    --bg-color: #090A0B;
+    --text-color: #B3C4DD;
+    --accent-color: #B3C4DD;
     --font-family: Lato, Helvetica, sans-serif;
     --font-display: 'Lalezar';
 }
-
-.post {
-    position: relative;
-    display: flex;
-    height: 400px;
-    width: 380px;
-}
-
-    .post img {
-        width: 100%;
-        object-fit: cover;
-    }
 
 
 .post-title {
@@ -285,20 +273,10 @@ li:hover ~ li p {
     font-weight: 700;
     margin: 0 auto;
     padding: var(--padding);
-    color: #0a643a;
+    color: #89023E;
     background: var(--bg-color);
     font-family: var(--font-family);
     margin-bottom: 0;
-}
-
-post-title:after {
-    content: '';
-    display: block;
-    height: 8px;
-    background: var(--accent-color);
-    max-width: 55px;
-    transform: skewX(-21deg) translateY(-13px);
-    border-radius: 3px;
 }
 
 
@@ -313,11 +291,6 @@ post-title:after {
     line-height: 2;
     font-size: 21px;
 }
-
-.no-shadow {
-    box-shadow: none;
-}
-
 
 
 
@@ -334,9 +307,9 @@ post-title:after {
     flex-direction: column;
     min-width: 0;
     word-wrap: break-word;
-    background-color: #fff;
+    background-color: #B3C4DD;
     background-clip: border-box;
-    border: 1px solid #d2d2dc;
+    border: 1px solid #B3C4DD;
     border-radius: 11px;
     -webkit-box-shadow: 0px 0px 5px 0px rgb(249, 249, 250);
     -moz-box-shadow: 0px 0px 5px 0px rgba(212, 182, 212, 1);
@@ -347,7 +320,7 @@ post-title:after {
     text-decoration: underline;
     text-underline-position: under;
     cursor: pointer;
-    margin 10px;
+    margin: 10px;
 }
 
 @media (max-width: 800px) {
@@ -464,7 +437,6 @@ post-title:after {
 .flexnav li a:hover {
     color: #a53860;
 }
-
 
 
 
@@ -602,7 +574,6 @@ post-title:after {
     margin: 50px auto 0 auto;
     width: 100%;
     display: flex;
-    align-items: space-around;
     max-width: 1200px;
     background-color: #090A0B;
 }
@@ -613,53 +584,39 @@ post-title:after {
     margin: 10px;
     background-color: #090A0B;
     display: inline-block;
-    background-size: cover;
     position: relative;
     cursor: pointer;
     transition: all 0.4s ease-out;
     box-shadow: 0px 35px 77px -17px rgba(0,0,0,0.44);
     overflow: hidden;
-    color: white;
-    font-family: 'Roboto';
 }
 
     .tile img {
-        height: 100%;
         width: 100%;
+        height: 100%;
         position: absolute;
         top: 0;
         left: 0;
-        z-index: 0;
+        z-index: 1;
         transition: all 0.4s ease-out;
     }
 
-    .tile .text {
-        /*   z-index:99; */
-        position: absolute;
-        padding: 30px;
-        height: calc(100% - 60px);
-    }
+.text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 30px;
+    z-index: 2;
+}
 
-    .tile h1 {
-        font-weight: 300;
-        margin: 0;
-        text-shadow: 2px 2px 10px rgba(0,0,0,0.3);
-    }
-
-    .tile h2 {
-        font-weight: 100;
-        margin: 20px 0 0 0;
-        font-style: italic;
-        transform: translateX(200px);
-    }
-
-    .tile p {
-        font-weight: 300;
-        margin: 20px 0 0 0;
-        line-height: 25px;
-        /*   opacity:0; */
-        transform: translateX(-200px);
-        transition-delay: 0.2s;
+    .text a {
+        display: block;
+        width: 100%;
+        height: 100%;
+        z-index: 3;
+        position: relative;
     }
 
 .animate-text {
@@ -734,6 +691,7 @@ post-title:after {
     font-family: "Roboto", sans-serif;
     font-weight: 700;
     color: #B3C4DD;
+    background-color: #090A0B; 
     text-align: center;
     transition: all 0.2s;
 }
