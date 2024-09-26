@@ -1,5 +1,5 @@
 ﻿using Microsoft.Extensions.Options;
-using My3rdBlog.Configuration;
+using MyBlog.Configuration;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,7 +8,7 @@ using System.Net.Mail;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace My3rdBlog.Services.Email
+namespace MyBlog.Services.Email
 {
     public class EmailService : IEmailService
     {
@@ -16,21 +16,29 @@ namespace My3rdBlog.Services.Email
         private readonly SmtpClient _client;
         public EmailService(IOptions<SmtpSettings> options)
         {
+            ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
             _settings = options.Value;
             _client = new SmtpClient(_settings.Server)
             {
-                Credentials = new NetworkCredential(_settings.Username, _settings.Password)
+                Credentials = new NetworkCredential(_settings.Username, _settings.Password),
+                EnableSsl = true,
             };
         }
-        public Task SendEmail(string email, string subject, string message)
+        public async void SendEmail(string email, string subject, string message)
         {
             var mailMessage = new MailMessage(
                 _settings.From,
                 email,
                 subject,
                 message);
-
-            return _client.SendMailAsync(mailMessage);
+            try
+            {
+                await _client.SendMailAsync(mailMessage);
+            }
+            catch (Exception ex)
+            {
+                
+            }
         }
     }
 }

@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
-using My3rdBlog.Data.FileManager;
+using MyBlog.Data.FileManager;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using PhotoSauce.MagicScaler;
 
-namespace My3rdBlog.Data.FileManager
+namespace MyBlog.Data.FileManager
 {
     public class FileManager : IFileManager
     {

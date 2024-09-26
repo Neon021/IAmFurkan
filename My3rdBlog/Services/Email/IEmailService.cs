@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace My3rdBlog.Services.Email
+namespace MyBlog.Services.Email
 {
     public interface IEmailService
     {
-        Task SendEmail(string email, string subject, string message);
+        void SendEmail(string email, string subject, string message);
     }
 }

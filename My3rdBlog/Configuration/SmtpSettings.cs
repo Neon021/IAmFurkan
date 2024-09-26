@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace My3rdBlog.Configuration
+namespace MyBlog.Configuration
 {
     public class SmtpSettings
     {

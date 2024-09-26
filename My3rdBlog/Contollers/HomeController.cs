@@ -1,8 +1,8 @@
 ﻿using Blog.Data.Repository;
 using Microsoft.AspNetCore.Mvc;
-using My3rdBlog.Data.Comments;
-using My3rdBlog.Data.FileManager;
-using My3rdBlog.ViewModels;
+using MyBlog.Data.Comments;
+using MyBlog.Data.FileManager;
+using MyBlog.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;

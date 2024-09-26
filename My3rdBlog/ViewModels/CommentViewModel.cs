@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Web.Mvc;
 
-namespace My3rdBlog.ViewModels
+namespace MyBlog.ViewModels
 {
     public class CommentViewModel
     {

@@ -1,7 +1,7 @@
 using Blog.Helpers.Startup;
 using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
-using My3rdBlog;
+using MyBlog;
 using System.Threading.Tasks;
 
 namespace Blog
@@ -10,8 +10,11 @@ namespace Blog
     {
         public static void Main(string[] args)
         {
-            var host = CreateWebHostBuilder(args).Build();
-
+	var host = CreateWebHostBuilder(args)
+		    .UseKestrel()
+		    .UseUrls("http://*:5001")
+		    .UseStartup<Startup>()
+		    .Build();	
             Task<bool> roleResult = IdentityHelper.InitAsync(host);
             host.Run();
         }

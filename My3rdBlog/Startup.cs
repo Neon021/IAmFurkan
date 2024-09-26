@@ -8,11 +8,12 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using My3rdBlog.Configuration;
-using My3rdBlog.Data.FileManager;
-using My3rdBlog.Services.Email;
+using MyBlog.Configuration;
+using MyBlog.Data.FileManager;
+using MyBlog.Services.Email;
+using System.Net;
 
-namespace My3rdBlog
+namespace MyBlog
 {
     public class Startup
     {

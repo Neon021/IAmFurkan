@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using TechTalk.SpecFlow.CommonModels;
-using My3rdBlog.Data.Comments;
+using MyBlog.Data.Comments;
 using Blog.ViewModels;
 
 namespace Blog.Data.Repository

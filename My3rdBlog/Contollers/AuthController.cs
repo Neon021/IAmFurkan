@@ -1,14 +1,11 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
-using My3rdBlog.Services.Email;
-using My3rdBlog.ViewModels;
+using MyBlog.Services.Email;
+using MyBlog.ViewModels;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
-namespace My3rdBlog.Contollers
+namespace MyBlog.Contollers
 {
     public class AuthController : Controller
     {
@@ -44,7 +41,7 @@ namespace My3rdBlog.Contollers
             {
                 return RedirectToAction("Index", "Panel");
             }
-            
+
             return RedirectToAction("Index", "Home");
         }
 
@@ -66,12 +63,12 @@ namespace My3rdBlog.Contollers
                 UserName = vm.UserName,
                 Email = vm.Email
             };
-            var result = await _userManager.CreateAsync(user, "password");
+            var result = await _userManager.CreateAsync(user, vm.Password);
 
             if (result.Succeeded)
             {
                 await _signInManager.SignInAsync(user, false);
-                await _emailService.SendEmail(user.Email, "Welcome", "Thank you for registering ");
+                _emailService.SendEmail(user.Email, "Welcome", "Thank you for registering");
                 return RedirectToAction("Index", "Home");
             }
             return View();
