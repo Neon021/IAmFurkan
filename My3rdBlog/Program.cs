@@ -10,8 +10,11 @@ namespace Blog
     {
         public static void Main(string[] args)
         {
-            var host = CreateWebHostBuilder(args).Build();
-
+	var host = CreateWebHostBuilder(args)
+		    .UseKestrel()
+		    .UseUrls("http://*:5001")
+		    .UseStartup<Startup>()
+		    .Build();	
             Task<bool> roleResult = IdentityHelper.InitAsync(host);
             host.Run();
         }
