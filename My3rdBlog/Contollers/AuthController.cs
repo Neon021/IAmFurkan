@@ -71,7 +71,7 @@ namespace My3rdBlog.Contollers
             if (result.Succeeded)
             {
                 await _signInManager.SignInAsync(user, false);
-                await _emailService.SendEmail(user.Email, "Welcome", "Thank you for registering ");
+                _emailService.SendEmail(user.Email, "Welcome", "Thank you for registering");
                 return RedirectToAction("Index", "Home");
             }
             return View();

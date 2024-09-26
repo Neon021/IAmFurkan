@@ -16,19 +16,27 @@ namespace My3rdBlog.Services.Email
         private readonly SmtpClient _client;
         public EmailService(IOptions<SmtpSettings> options)
         {
+            ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
             _settings = options.Value;
             _client = new SmtpClient(_settings.Server)
             {
-                Credentials = new NetworkCredential(_settings.Username, _settings.Password)
+                Credentials = new NetworkCredential(_settings.Username, _settings.Password),
+                EnableSsl = true,
             };
         }
-        public Task SendEmail(string email, string subject, string message)
+        public async void SendEmail(string email, string subject, string message)
         {
             var mailMessage = new MailMessage(
                 _settings.From,
                 email,
                 subject,
                 message);
+            try
+            {
+                await _client.SendMailAsync(mailMessage);
+            }
+            catch (Exception ex)
+            {
 
             return _client.SendMailAsync(mailMessage);
         }

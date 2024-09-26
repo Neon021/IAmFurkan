@@ -8,6 +8,6 @@ namespace My3rdBlog.Services.Email
 {
     public interface IEmailService
     {
-        Task SendEmail(string email, string subject, string message);
+        void SendEmail(string email, string subject, string message);
     }
 }
