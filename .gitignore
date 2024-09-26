@@ -10,7 +10,7 @@
 *.userosscache
 *.sln.docstates
 **/appsettings.json
-**\My3rdBlog\wwwroot\lib\tinymce\
+**/wwwroot/lib/tinymce/
 
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
