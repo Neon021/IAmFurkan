@@ -1,14 +1,11 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
-using My3rdBlog.Services.Email;
-using My3rdBlog.ViewModels;
+using MyBlog.Services.Email;
+using MyBlog.ViewModels;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
-namespace My3rdBlog.Contollers
+namespace MyBlog.Contollers
 {
     public class AuthController : Controller
     {
@@ -44,7 +41,7 @@ namespace My3rdBlog.Contollers
             {
                 return RedirectToAction("Index", "Panel");
             }
-            
+
             return RedirectToAction("Index", "Home");
         }
 

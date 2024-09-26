@@ -1,6 +1,6 @@
 ﻿using Blog.Models;
 using Microsoft.EntityFrameworkCore;
-using My3rdBlog.Data.Comments;
+using MyBlog.Data.Comments;
 using Blog.ViewModels;
 using System;
 using System.Collections.Generic;

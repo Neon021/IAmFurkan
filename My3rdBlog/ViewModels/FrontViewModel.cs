@@ -1,5 +1,5 @@
-﻿using My3rdBlog.Data.Comments;
-using My3rdBlog.ViewModels;
+﻿using MyBlog.Data.Comments;
+using MyBlog.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;

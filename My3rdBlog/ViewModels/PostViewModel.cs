@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using System;
 
-namespace My3rdBlog.ViewModels
+namespace MyBlog.ViewModels
 {
     public class PostViewModel
     {

@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace My3rdBlog.ViewModels
+namespace MyBlog.ViewModels
 {
     public class LoginViewModel
     {

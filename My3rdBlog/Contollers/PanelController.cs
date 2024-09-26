@@ -2,11 +2,11 @@
 using Blog.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using My3rdBlog.Data.FileManager;
-using My3rdBlog.ViewModels;
+using MyBlog.Data.FileManager;
+using MyBlog.ViewModels;
 using System.Threading.Tasks;
 
-namespace My3rdBlog.Contollers
+namespace MyBlog.Contollers
 {
     [Authorize(Roles = "Admin")]
     public class PanelController : Controller

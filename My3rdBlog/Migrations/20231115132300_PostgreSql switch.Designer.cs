@@ -255,7 +255,7 @@ namespace Blog.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
-            modelBuilder.Entity("My3rdBlog.Data.Comments.MainComment", b =>
+            modelBuilder.Entity("MyBlog.Data.Comments.MainComment", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -279,7 +279,7 @@ namespace Blog.Migrations
                     b.ToTable("MainComments");
                 });
 
-            modelBuilder.Entity("My3rdBlog.Data.Comments.SubComment", b =>
+            modelBuilder.Entity("MyBlog.Data.Comments.SubComment", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -354,16 +354,16 @@ namespace Blog.Migrations
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("My3rdBlog.Data.Comments.MainComment", b =>
+            modelBuilder.Entity("MyBlog.Data.Comments.MainComment", b =>
                 {
                     b.HasOne("Blog.Models.Post", null)
                         .WithMany("MainComments")
                         .HasForeignKey("PostId");
                 });
 
-            modelBuilder.Entity("My3rdBlog.Data.Comments.SubComment", b =>
+            modelBuilder.Entity("MyBlog.Data.Comments.SubComment", b =>
                 {
-                    b.HasOne("My3rdBlog.Data.Comments.MainComment", null)
+                    b.HasOne("MyBlog.Data.Comments.MainComment", null)
                         .WithMany("subComments")
                         .HasForeignKey("MainCommentId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -375,7 +375,7 @@ namespace Blog.Migrations
                     b.Navigation("MainComments");
                 });
 
-            modelBuilder.Entity("My3rdBlog.Data.Comments.MainComment", b =>
+            modelBuilder.Entity("MyBlog.Data.Comments.MainComment", b =>
                 {
                     b.Navigation("subComments");
                 });

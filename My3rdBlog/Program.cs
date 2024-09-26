@@ -1,7 +1,7 @@
 using Blog.Helpers.Startup;
 using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
-using My3rdBlog;
+using MyBlog;
 using System.Threading.Tasks;
 
 namespace Blog
