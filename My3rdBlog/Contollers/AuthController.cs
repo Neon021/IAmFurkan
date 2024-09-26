@@ -63,7 +63,7 @@ namespace MyBlog.Contollers
                 UserName = vm.UserName,
                 Email = vm.Email
             };
-            var result = await _userManager.CreateAsync(user, "password");
+            var result = await _userManager.CreateAsync(user, vm.Password);
 
             if (result.Succeeded)
             {
